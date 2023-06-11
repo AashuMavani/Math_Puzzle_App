@@ -25,15 +25,24 @@ public class Win_Page_Activity extends AppCompatActivity {
         main_menu=findViewById(R.id.main_menu);
         share=findViewById(R.id.share);
 
-        levelno=getIntent().getIntExtra("level",0);
+        levelno=getIntent().getIntExtra("level",0);//0
 
-        level_copmlete.setText("PUZZLE"+ levelno +" COMPLETED");
+        level_copmlete.setText("PUZZLE"+ levelno +" COMPLETED");//0
 
 
         continue2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Win_Page_Activity.this,Level_board_Activity.class);
+                intent.putExtra("level",levelno);//6
+                startActivity(intent);
+                finish();
+            }
+        });
+        main_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Win_Page_Activity.this,MainActivity.class);
                 intent.putExtra("level",levelno);
                 startActivity(intent);
                 finish();

@@ -4,12 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Lock_Page_Activity">
+    tools:context=".Activity.Lock_Page_Activity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Puzzle"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:background="@color/black"
+        android:textColor="#673AB7"
+        android:textStyle="italic"/>
+
+
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="4"
-        tools:listitem="@layout/lock_page_layout"></GridView>
+        tools:listitem="@layout/lock_page_layout"/>
 
 </LinearLayout>
